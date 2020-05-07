@@ -38,7 +38,7 @@ while True:
     user_input = input('''Please select an option:
 1 Staff Login
 2 Close App
->''').strip()
+> ''').strip()
 
     if user_input not in ['1','2']:
         print('Enter a valid option')
@@ -59,9 +59,9 @@ while True:
 > ''').strip()
             if actions == '1':
                 acc_name = input("Enter account holder's name: ")
-                opening_balance = int(input('Enter Opening Balance: '))     
+                opening_balance = float(input('Enter Opening Balance: '))     
                 acc_type = input("Enter account type: ")
-                acc_email = input("Enter Account email")
+                acc_email = input("Enter Account email: ")
                 seed(datetime.now())
                 acc_num = ''.join(choices(string.digits,k = 10))
                 with open('customer.txt', 'a') as file:
@@ -83,6 +83,7 @@ Email:{acc_details[3]}
 ''')
             if actions == '3':
                 remove('log.txt')
+                break
 
         continue
     if user_input == 2:
