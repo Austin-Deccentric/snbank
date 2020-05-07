@@ -67,7 +67,7 @@ while True:
                 with open('customer.txt', 'a') as file:
                     file.write('{}: {}, {}, {}, {}'.format(acc_num,acc_name,opening_balance,acc_type,acc_email))
                     file.write('\n')
-                print("Your account number is: ",acc_num)
+                print("\n Your account number is: ",acc_num)
                 continue
 
             if actions == '2':
